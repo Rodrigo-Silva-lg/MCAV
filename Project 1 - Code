@@ -1,0 +1,50 @@
+>> pkg load control
+>> s = tf('s')
+
+Transfer function 's' from input 'u1' to output ...
+
+ y1:  s
+
+Continuous-time model.
+>> g=0.0138/(s^2)
+
+Transfer function 'g' from input 'u1' to output ...
+
+      0.0138
+ y1:  ------
+       s^2
+
+Continuous-time model.
+>> bode(g)
+>> step(g)
+
+>> k_1=1/(s^2+1)
+
+Transfer function 'k_1' from input 'u1' to output ...
+
+         1
+ y1:  -------
+      s^2 + 1
+
+Continuous-time model.
+>> rlocus(k_1)
+>> k_2=1/(s+1)
+
+Transfer function 'k_2' from input 'u1' to output ...
+
+        1
+ y1:  -----
+      s + 1
+
+Continuous-time model.
+>> rlocus(k_2)
+>> k_3=1/((s+1)*(s+5))
+
+Transfer function 'k_3' from input 'u1' to output ...
+
+            1
+ y1:  -------------
+      s^2 + 6 s + 5
+
+Continuous-time model.
+>> rlocus(k_3)
